@@ -1,0 +1,18 @@
+.workouts-page-container{
+    position: relative;
+    background-color: white;
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.add-workout-button{
+    background-color: rgb(0, 60, 255);
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    width: 200px;
+    height: 50px;
+}

@@ -1,0 +1,50 @@
+.workout-card-container{
+    position: relative;
+    background-color:#2f3640;
+    padding: 10px;
+    border-radius: 5px;
+    width: 80%;
+    height: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+}
+
+
+.workout-card-title{
+position: relative;
+margin-left: 30px;
+margin-right: 20px;
+    font-weight: bold;
+    font-size: 35px;
+    
+    margin-top: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+
+
+    text-align: center;
+  
+}
+
+.workout-card-date{
+    position: absolute;
+    background-color: #0085FF;
+    padding: 5px 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.workout-card-tag{
+    position: relative;
+    background-color: black;
+    color: white;
+    width: 20px;
+    height: 30px;
+    font-weight: bold;
+    display: inline-block;
+}
