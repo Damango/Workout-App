@@ -1,9 +1,9 @@
 .workouts-page-container{
     position: relative;
     background-color: white;
-    color: white;
-    width: 100%;
-    height: 100%;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
 }
 
 .add-workout-button{
@@ -15,4 +15,37 @@
     border-radius: 5px;
     width: 200px;
     height: 50px;
+}
+
+.create-workout-button{
+    background-color:aquamarine;
+    color: white;
+    padding: 5px 10px;
+    border-style: none;
+}
+
+
+.workouts-container{
+    position: relative;
+    height: 100%;
+ 
+    background: pink;
+}
+
+.left-view-container{
+    height: 100%;
+    width: 40%;
+    padding: 30px;
+   
+    float: left;
+    
+}
+
+.right-view-container{
+    position: relative;
+    height: 100%;
+    width: 50%;
+    padding: 30px;
+    background-color: red;
+    float: right;
 }

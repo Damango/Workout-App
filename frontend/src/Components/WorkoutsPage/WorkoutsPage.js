@@ -51,15 +51,28 @@ const WorkoutsPage = (props) => {
 
     return (<div className="workouts-page-container">
 
-        <h1>WORKOUTS PAGE</h1>
-        <button className="add-workout-button" onClick={addWorkout}>Add Workout</button>
+        <div className="left-view-container">
+            <h1>WORKOUTS</h1>
+            <button className="create-workout-button">+ Create Workout</button>
+
+            <div className="workouts-container">
 
 
-        <div className="workouts-container">
+                {workoutData.map((workout) => <Workout data={workout} />)}
+            </div>
 
-
-            {workoutData.map((workout) => <Workout data={workout} />)}
         </div>
+
+        <div className="right-view-container">
+
+            <div className="workout-data-container"></div>
+
+
+        </div>
+
+
+
+
 
 
 

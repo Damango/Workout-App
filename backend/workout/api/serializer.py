@@ -5,4 +5,4 @@ from workout.models import Workout
 class WorkoutSerializer(serializers.ModelSerializer):
     class Meta:
         model = Workout
-        fields = ('title', 'jtype', 'date')
+        fields = ('title', 'tag', 'exercises', 'date')

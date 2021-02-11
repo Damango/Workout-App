@@ -2,13 +2,14 @@
     position: relative;
     background-color:#2f3640;
     padding: 10px;
-    border-radius: 5px;
-    width: 80%;
-    height: 100px;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 20px;
+    border-radius: 3px;
+    width: 400px;
+    color: white;
+    height: 65px;
+
+    margin-top: 30px;
 }
+
 
 
 .workout-card-title{
