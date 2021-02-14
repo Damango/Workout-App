@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import Workout from "../Workout/Workout"
+import CreateWorkoutModal from "./CreateWorkoutModal/CreateWorkoutModal"
 import "./WorkoutsPage.css"
 import axios from 'axios';
 const WorkoutsPage = (props) => {
 
 
     const [workoutData, setWorkoutData] = useState([])
+
+    const [createModal, setCreateModal] = useState(0)
+
+
 
 
 
@@ -15,6 +20,27 @@ const WorkoutsPage = (props) => {
             setWorkoutData(res.data)
         })
     }, [])
+
+
+    function renderCreateModal() {
+
+        if (createModal === 1) {
+            return (<CreateWorkoutModal />)
+        }
+    }
+
+
+
+    function openCreateModal() {
+
+        if (createModal === 0) {
+            setCreateModal(1)
+        }
+        else if (createModal === 1) {
+            setCreateModal(0)
+        }
+
+    }
 
 
     function addWorkout() {
@@ -29,6 +55,7 @@ const WorkoutsPage = (props) => {
 
         axios.post('http://localhost:8000/api/', {
             title: 'Push',
+            tag: 'Hypertrophy',
             exercises: [{
                 title: 'Push Ups',
                 categories: ['Chest', 'Tricep'],
@@ -51,9 +78,13 @@ const WorkoutsPage = (props) => {
 
     return (<div className="workouts-page-container">
 
+
+        {renderCreateModal()}
+
         <div className="left-view-container">
             <h1>WORKOUTS</h1>
-            <button className="create-workout-button">+ Create Workout</button>
+            <button className="create-workout-button" onClick={openCreateModal}>+ Create Workout</button>
+            <button onClick={addWorkout}>Add Workout</button>
 
             <div className="workouts-container">
 
@@ -64,6 +95,7 @@ const WorkoutsPage = (props) => {
         </div>
 
         <div className="right-view-container">
+            <h1>VOLUME</h1>
 
             <div className="workout-data-container"></div>
 

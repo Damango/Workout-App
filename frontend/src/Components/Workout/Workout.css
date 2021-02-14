@@ -3,11 +3,18 @@
     background-color:#2f3640;
     padding: 10px;
     border-radius: 3px;
-    width: 400px;
+    width: 80%;
     color: white;
-    height: 65px;
+    height: 75px;
 
     margin-top: 30px;
+    transition: 0.2s;
+}
+
+.workout-card-container:hover{
+    height: 90px;
+    cursor: pointer;
+    background-color: #3b3f46;
 }
 
 
@@ -30,22 +37,26 @@ margin-right: 20px;
 }
 
 .workout-card-date{
-    position: absolute;
+    position: relative;
     background-color: #0085FF;
-    padding: 5px 10px;
-    margin-left: 20px;
+    margin-left: 100px;
+    margin-top: auto;
     margin-right: 20px;
-
+    padding: 5px 15px;
+    font-weight: bold;
     border-radius: 5px;
     display: inline-block;
 }
 
 .workout-card-tag{
     position: relative;
-    background-color: black;
-    color: white;
-    width: 20px;
-    height: 30px;
+    background-color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    color:#2f3640;
+    margin-top: auto;
     font-weight: bold;
     display: inline-block;
+    font-weight: bold;
+    font-family: Roboto;
 }
