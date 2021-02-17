@@ -5,7 +5,13 @@ const Workout = (props) => {
 
     let theDate = props.data.date.substr(0, 10)
 
-    return (<div className="workout-card-container">
+
+
+    function changeModalData() {
+        props.changeModalData(props.data);
+    }
+
+    return (<div className="workout-card-container" onClick={changeModalData}>
 
         <div className='workout-card-title'>{props.data.title}</div>
         <div className="workout-card-date">{theDate}</div>

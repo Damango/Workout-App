@@ -1,0 +1,23 @@
+.workout-modal-container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 1px 1px 10px 5px #888888;
+    z-index: 3;
+    width: 1400px;
+    height: 750px;
+    padding: 15px;
+}
+
+
+
+.workout-modal-title{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.workout-modal-date{
+    display: inline-block;
+}

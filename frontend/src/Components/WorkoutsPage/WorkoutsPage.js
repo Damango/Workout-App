@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Workout from "../Workout/Workout"
-import CreateWorkoutModal from "./CreateWorkoutModal/CreateWorkoutModal"
+import WorkoutModal from "./WorkoutModal/WorkoutModal"
 import "./WorkoutsPage.css"
 import axios from 'axios';
 const WorkoutsPage = (props) => {
@@ -9,6 +9,8 @@ const WorkoutsPage = (props) => {
     const [workoutData, setWorkoutData] = useState([])
 
     const [createModal, setCreateModal] = useState(0)
+
+    const [modalData, setModalData] = useState()
 
 
 
@@ -25,8 +27,13 @@ const WorkoutsPage = (props) => {
     function renderCreateModal() {
 
         if (createModal === 1) {
-            return (<CreateWorkoutModal />)
+            return (<WorkoutModal data={modalData} />)
         }
+    }
+
+    function changeModalData(data) {
+        setModalData(data)
+        setCreateModal(1)
     }
 
 
@@ -89,7 +96,7 @@ const WorkoutsPage = (props) => {
             <div className="workouts-container">
 
 
-                {workoutData.map((workout) => <Workout data={workout} />)}
+                {workoutData.map((workout) => <Workout data={workout} changeModalData={changeModalData} />)}
             </div>
 
         </div>
