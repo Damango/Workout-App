@@ -27,7 +27,7 @@ const WorkoutsPage = (props) => {
     function renderCreateModal() {
 
         if (createModal === 1) {
-            return (<WorkoutModal data={modalData} />)
+            return (<WorkoutModal data={modalData} closeModal={openCreateModal} />)
         }
     }
 

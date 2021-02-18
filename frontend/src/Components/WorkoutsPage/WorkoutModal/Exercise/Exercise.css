@@ -1,0 +1,18 @@
+.exercises-container{
+    position: relative;
+    background-color: purple;
+    height: 80%;
+    margin-top: 50px;
+}
+
+.exercise-wrapper{
+    position: relative;
+    background-color: black;
+    width: 80%;
+    height: 100px;
+    color: white;
+}
+
+.exercise-header div{
+    display: inline-block;
+}
