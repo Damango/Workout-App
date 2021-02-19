@@ -10,6 +10,18 @@
     height: 750px;
     padding: 15px;
     border-radius: 5px;
+    overflow-y: scroll;
+    transition: 0.5s;
+}
+
+
+
+.modal-header{
+    position: relative;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 50px;
 }
 
 
@@ -17,16 +29,36 @@
 .workout-modal-title{
     display: inline-block;
     margin-right: 20px;
+    font-size: 30px;
+    font-family: Roboto;
+    font-weight: bold;
+ 
+}
+
+.empty-workout-title{
+    border-bottom: 1px solid black;
+    width: 200px;
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 30px;
+    font-family: Roboto;
+    font-weight: bold;
 }
 
 .workout-modal-date{
     display: inline-block;
+    background-color: #1157ee;
+    color: white;
+    font-family: Roboto;
+    padding: 7px 15px;
+    font-size: 20px;
+    border-radius: 5px;
 }
 
 
 .close-modal-button{
     position: absolute;
-    top: 20px;
+    top: 10px;
     right: 20px;
     color: black;
     font-family: Roboto;
@@ -36,5 +68,22 @@
     padding:  10px;
     background-color: transparent;
     border-style: none;
+    transition: 0.3s;
 }
+
+.close-modal-button:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.exercises-container{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    height: 80%;
+    width: 90%;
+    margin-top: 50px;
+}
+
 

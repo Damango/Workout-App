@@ -28,20 +28,35 @@ const WorkoutsPage = (props) => {
 
         if (createModal === 1) {
             return (<WorkoutModal data={modalData} closeModal={openCreateModal} />)
+        } else {
+            return ''
         }
     }
 
     function changeModalData(data) {
+        setCreateModal(0)
         setModalData(data)
-        setCreateModal(1)
+
+        setTimeout(function () {
+            setCreateModal(1)
+        }, 10)
+
     }
 
 
 
+    // When create workout is clicked make a new function to handle that specific
+    // instance and creates a blank modal with temporary information and
+    // Posts a blank structure to database.
+
     function openCreateModal() {
 
         if (createModal === 0) {
+
+
             setCreateModal(1)
+
+
         }
         else if (createModal === 1) {
             setCreateModal(0)
@@ -51,18 +66,12 @@ const WorkoutsPage = (props) => {
 
 
     function addWorkout() {
-
-
-
-
-
         axios.defaults.xsrfCookieName = 'csrftoken'
         axios.defaults.xsrfHeaderName = 'X-CSRFToken'
 
-
         axios.post('http://localhost:8000/api/', {
-            title: 'Push',
-            tag: 'Hypertrophy',
+            title: 'Chest Day',
+            tag: 'Strength',
             exercises: [{
                 title: 'Push Ups',
                 categories: ['Chest', 'Tricep'],
@@ -77,6 +86,21 @@ const WorkoutsPage = (props) => {
                     reps: 10,
                     weight: 225
                 }]
+            }, {
+                title: "Bench Press",
+                categories: ['Chest', "Tricep"],
+                sets: [{
+                    reps: 12,
+                    weight: 315
+                },
+                {
+                    reps: 10,
+                    weight: 325
+                },
+                {
+                    reps: 8,
+                    weight: 345
+                }]
             }]
         }
 
@@ -90,7 +114,18 @@ const WorkoutsPage = (props) => {
 
         <div className="left-view-container">
             <h1>WORKOUTS</h1>
-            <button className="create-workout-button" onClick={openCreateModal}>+ Create Workout</button>
+            <button className="create-workout-button" onClick={() => {
+
+                changeModalData({
+                    title: '',
+                    tag: '',
+                    date: '12-20-41',
+                    exercises: []
+                });
+
+                console.log(modalData.title)
+            }}
+            >+ Create Workout</button>
             <button onClick={addWorkout}>Add Workout</button>
 
             <div className="workouts-container">
