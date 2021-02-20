@@ -29,7 +29,6 @@
 .workouts-container{
     position: relative;
     height: 80%;
- 
 
     overflow-y: scroll;
 }

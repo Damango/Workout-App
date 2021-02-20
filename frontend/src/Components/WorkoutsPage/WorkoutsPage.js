@@ -19,7 +19,7 @@ const WorkoutsPage = (props) => {
     useEffect(() => {
         axios.get('http://localhost:8000/api/').then((res) => {
             console.log(res.data)
-            setWorkoutData(res.data)
+            setWorkoutData(res.data.reverse())
         })
     }, [])
 
