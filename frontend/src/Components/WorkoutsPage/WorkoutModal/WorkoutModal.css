@@ -49,7 +49,7 @@
 }
 
 .workout-title-input{
-    padding: 10px;
+    padding: 10px 10px 10px 0px;
     border: none;
     font-weight: bold;
     font-size: 25px;
@@ -101,8 +101,25 @@ outline: none;
     height: 80%;
     width: 90%;
     margin-top: 50px;
+    padding: 15px;
 }
 
 
+.add-exercise-button{
+    margin-top: 20px;
+    background-color: #1abc9c;
+    padding: 8px 15px;
+    font-family: Roboto;
+    color: white;
+    font-size: 20px;
+    border-style: none;
+
+    transition: 0.3s;
+}
+
+.add-exercise-button:hover{
+    cursor: pointer;
+    background-color: #16dfb7;
+}
 
 
