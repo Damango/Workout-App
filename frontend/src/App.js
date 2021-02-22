@@ -26,19 +26,7 @@ function App() {
     axios.defaults.xsrfHeaderName = 'X-CSRFToken'
 
 
-    /*axios.post('http://localhost:8000/api/', {
-      title: 'Workout',
-      jtype: [{
-        title: 'Push Ups',
-        categories: ['Chest', 'Tricep'],
-        sets: [{
-          reps: 20,
-          weight: 225
-        }]
-      }]
-    }
-  
-    )*/
+
 
   }, [])
 

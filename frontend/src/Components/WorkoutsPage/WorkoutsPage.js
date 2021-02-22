@@ -20,14 +20,23 @@ const WorkoutsPage = (props) => {
         axios.get('http://localhost:8000/api/').then((res) => {
             console.log(res.data)
             setWorkoutData(res.data.reverse())
+            console.log('Using Effect')
         })
     }, [])
+
+    function updateList() {
+        axios.get('http://localhost:8000/api/').then((res) => {
+
+            setWorkoutData(res.data.reverse())
+
+        })
+    }
 
 
     function renderCreateModal() {
 
         if (createModal === 1) {
-            return (<WorkoutModal data={modalData} closeModal={openCreateModal} />)
+            return (<WorkoutModal data={modalData} closeModal={openCreateModal} updateList={updateList} />)
         } else {
             return ''
         }
@@ -50,18 +59,12 @@ const WorkoutsPage = (props) => {
     // Posts a blank structure to database.
 
     function openCreateModal() {
-
         if (createModal === 0) {
-
-
             setCreateModal(1)
-
-
         }
         else if (createModal === 1) {
             setCreateModal(0)
         }
-
     }
 
 
@@ -103,10 +106,8 @@ const WorkoutsPage = (props) => {
                 }]
             }]
         }
-
         )
     }
-
     return (<div className="workouts-page-container">
 
 
@@ -129,27 +130,14 @@ const WorkoutsPage = (props) => {
             <button onClick={addWorkout}>Add Workout</button>
 
             <div className="workouts-container">
-
-
                 {workoutData.map((workout) => <Workout data={workout} changeModalData={changeModalData} />)}
             </div>
 
         </div>
-
         <div className="right-view-container">
             <h1>VOLUME</h1>
-
             <div className="workout-data-container"></div>
-
-
         </div>
-
-
-
-
-
-
-
     </div>);
 }
 

@@ -35,15 +35,32 @@
  
 }
 
+
+
 .empty-workout-title{
-    border-bottom: 1px solid black;
-    width: 200px;
+    border-bottom: 2px solid rgb(31, 31, 31);
+    width: 250px;
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 40px;
     font-size: 30px;
     font-family: Roboto;
     font-weight: bold;
+    font-size: 30px;
 }
+
+.workout-title-input{
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+    font-size: 25px;
+    width: 250px;
+    margin-right: 40px;
+}
+
+.workout-title-input:focus{
+outline: none;
+}
+
 
 .workout-modal-date{
     display: inline-block;
@@ -85,5 +102,7 @@
     width: 90%;
     margin-top: 50px;
 }
+
+
 
 
