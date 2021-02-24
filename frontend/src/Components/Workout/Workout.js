@@ -13,9 +13,14 @@ const Workout = (props) => {
 
     return (<div className="workout-card-container" onClick={changeModalData}>
 
+
         <div className='workout-card-title'>{props.data.title}</div>
-        <div className="workout-card-date">{theDate}</div>
-        <div className="workout-card-tag">{props.data.tag}</div>
+        <div className="workout-tags-container">
+            <div className="workout-card-date">{theDate}</div>
+            <div className="workout-card-tag">{props.data.tag}</div>
+        </div>
+
+
 
 
 

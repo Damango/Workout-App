@@ -12,6 +12,8 @@ const WorkoutsPage = (props) => {
 
     const [modalData, setModalData] = useState()
 
+    const [workoutsLength, setWorkoutsLength] = useState(0)
+
 
 
 
@@ -20,7 +22,8 @@ const WorkoutsPage = (props) => {
         axios.get('http://localhost:8000/api/').then((res) => {
             console.log(res.data)
             setWorkoutData(res.data.reverse())
-            console.log('Using Effect')
+            setWorkoutsLength(res.data.length)
+
         })
     }, [])
 
@@ -28,6 +31,7 @@ const WorkoutsPage = (props) => {
         axios.get('http://localhost:8000/api/').then((res) => {
 
             setWorkoutData(res.data.reverse())
+            setWorkoutsLength(res.data.length)
 
         })
     }
@@ -36,7 +40,7 @@ const WorkoutsPage = (props) => {
     function renderCreateModal() {
 
         if (createModal === 1) {
-            return (<WorkoutModal data={modalData} closeModal={openCreateModal} updateList={updateList} />)
+            return (<WorkoutModal data={modalData} closeModal={openCreateModal} updateList={updateList} workoutLength={workoutsLength} />)
         } else {
             return ''
         }
@@ -124,7 +128,6 @@ const WorkoutsPage = (props) => {
                     exercises: []
                 });
 
-                console.log(modalData.title)
             }}
             >+ Create Workout</button>
             <button onClick={addWorkout}>Add Workout</button>

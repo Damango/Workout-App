@@ -8,7 +8,7 @@
     z-index: 3;
     width: 1400px;
     height: 750px;
-    padding: 15px;
+    padding: 25px;
     border-radius: 5px;
     overflow-y: scroll;
     transition: 0.5s;
@@ -74,7 +74,7 @@ outline: none;
 
 
 .close-modal-button{
-    position: absolute;
+    position: fixed !important;
     top: 10px;
     right: 20px;
     color: black;
@@ -106,14 +106,16 @@ outline: none;
 
 
 .add-exercise-button{
+    position: relative;
     margin-top: 20px;
     background-color: #1abc9c;
-    padding: 8px 15px;
+    padding: 15px 15px;
     font-family: Roboto;
+    text-align: center;
     color: white;
     font-size: 20px;
     border-style: none;
-
+    width: 100%;
     transition: 0.3s;
 }
 
@@ -121,5 +123,76 @@ outline: none;
     cursor: pointer;
     background-color: #16dfb7;
 }
+
+.new-exercise-container{
+    position: relative;
+   width: 100%;
+}
+
+.new-exercise-input{
+    padding: 8px 15px;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-right: 30px;
+}
+
+.chest{
+    background-color:#e67e22 ;
+    transition: 0.3s;
+}
+
+.chest:hover{
+  background-color: #b96012;
+}
+
+.back{
+    background-color: #3498db;
+    transition: 0.3s;
+}
+
+.back:hover{
+    background: #2172a8;
+}
+
+.shoulders{
+    background-color: #f1c40f;
+    transition: 0.3s;
+}
+
+.shoulders:hover{
+    background-color: #b69511;
+}
+.legs{
+    background-color: #e74c3c;
+    transition: 0.3s;
+}
+
+.legs:hover{
+    background-color: #b13122;
+}
+
+.tricep{
+    background-color:#1abc9c ;
+    transition: 0.3s;
+}
+
+.tricep:hover{
+    background-color: #13866f;
+}
+
+.bicep{
+    background-color: #8e44ad;
+    transition: 0.3s;
+}
+
+.bicep:hover{
+    background-color: #602779;
+}
+.category-button-container{
+
+    display: inline-block;
+    margin-top: 30px;
+}
+
 
 

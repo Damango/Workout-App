@@ -36,16 +36,24 @@ margin-right: 20px;
   
 }
 
+.workout-tags-container{
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+ 
+
+}
+
 .workout-card-date{
     position: relative;
     background-color: #0085FF;
-    margin-left: 100px;
-    margin-top: auto;
-    margin-right: 20px;
     padding: 5px 15px;
     font-weight: bold;
     border-radius: 5px;
     display: inline-block;
+    margin-right: 20px;
 }
 
 .workout-card-tag{
@@ -54,8 +62,8 @@ margin-right: 20px;
     padding: 5px 15px;
     border-radius: 5px;
     color:#2f3640;
-    margin-top: auto;
-    font-weight: bold;
+
+
     display: inline-block;
     font-weight: bold;
     font-family: Roboto;

@@ -23,7 +23,7 @@ const Exercise = (props) => {
 
         <div className="exercise-header">
             <div className="exercise-title">{props.data.title}</div>
-            <div className="exercise-categories">{props.data.categories.map((category) => <div className="exercise-category">{category}</div>)}</div>
+            <div className="exercise-categories">{props.data.categories.map((category) => <div className={"exercise-category " + category}>{category}</div>)}</div>
             <div className="total-sets">Sets:  {totalSets}</div>
             <div className="total-volume">Volume:  {totalVolume}</div>
         </div>
