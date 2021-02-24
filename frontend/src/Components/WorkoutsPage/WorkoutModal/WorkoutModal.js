@@ -79,7 +79,8 @@ const WorkoutModal = (props) => {
             updatedWorkout.exercises.push({
                 title: exerciseTitle,
                 categories: categories,
-                sets: []
+                sets: [],
+                id: updatedWorkout.exercises.length
             })
             console.log(updatedWorkout.exercises)
             axios.put('http://localhost:8000/api/' + workoutID + '/', updatedWorkout)
@@ -113,7 +114,7 @@ const WorkoutModal = (props) => {
             <div>{workoutID}</div>
         </div>
         <div className="exercises-container">
-            {exercises.map((exercise) => <Excercise data={exercise} />)}
+            {exercises.map((exercise) => <Excercise data={exercise} workoutID={workoutID} />)}
             <button onClick={addNewExercise} className="add-exercise-button">Add Exercise +</button>
             {renderNewExercise()}
         </div>

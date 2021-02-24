@@ -6,7 +6,7 @@
     transform: translateX(-50%);
     background-color: #2f3640;
     width: 100%;
-    height: 100px;
+    height: 120px;
     color: white;
     padding: 15px;
     margin-top: 20px;
@@ -48,9 +48,10 @@
 }
 
 .sets-editor-container{
+    position: absolute;
 
-    margin-top: 20px;
-   
+    bottom: 20px;
+    height: 50px;
     display: block;
 }
 
@@ -65,8 +66,35 @@
 }
 
 .add-set-button{
+    position: absolute;
     font-family: "Fira Sans";
     font-weight: bold;
     font-size: 20px;
     border-style: none;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.set-add-container{
+    display: inline-block;
+    margin-left: 30px;
+}
+
+
+
+.set-input-container{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.sets-input{
+    padding: 10px;
+}
+
+
+
+.set-input-container span{
+    display: block;
+    position: absolute;
+    top: -20px;
 }
