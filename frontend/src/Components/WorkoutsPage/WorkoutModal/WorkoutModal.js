@@ -106,6 +106,12 @@ const WorkoutModal = (props) => {
         }
     }
 
+
+    function deleteWorkout() {
+        axios.delete('http://localhost:8000/api/' + workoutID).then(response => { alert("Workout Deleted") });
+
+    }
+
     return (<animated.div style={animations} className='workout-modal-container'>
         <button className="close-modal-button" onClick={() => { props.closeModal(); props.updateList() }}>X</button>
         <div className="modal-header">
@@ -117,6 +123,7 @@ const WorkoutModal = (props) => {
             {exercises.map((exercise) => <Excercise data={exercise} workoutID={workoutID} />)}
             <button onClick={addNewExercise} className="add-exercise-button">Add Exercise +</button>
             {renderNewExercise()}
+            <button className="delete-workout-button" onClick={deleteWorkout}>DELETE</button>
         </div>
     </animated.div>);
 }
